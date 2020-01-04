@@ -540,7 +540,7 @@ static inline uint8_t lv_color_brightness(lv_color_t color)
 #elif LV_COLOR_DEPTH == 16
 #if LV_COLOR_16_SWAP == 0
 #ifdef __cplusplus
-#define LV_COLOR_MAKE(r8, g8, b8) (lv_color_t{{(b8 >> 3) & 0x1FU, (g8 >> 2) & 0x3FU, (r8 >> 3) & 0x1FU}})
+#define LV_COLOR_MAKE(r8, g8, b8) (lv_color_t{{static_cast<uint16_t>((b8 >> 3) & 0x1FU), static_cast<uint16_t>((g8 >> 2) & 0x3FU), static_cast<uint16_t>((r8 >> 3) & 0x1FU)}})
 #else
 #define LV_COLOR_MAKE(r8, g8, b8) ((lv_color_t){{(b8 >> 3) & 0x1FU, (g8 >> 2) & 0x3FU, (r8 >> 3) & 0x1FU}})
 #endif

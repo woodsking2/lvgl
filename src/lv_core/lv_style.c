@@ -127,8 +127,7 @@ void lv_style_init(void)
     lv_style_scr.debug_sentinel = LV_STYLE_DEGUG_SENTINEL_VALUE;
 #endif
 #endif
-
-    /*Plain style (by default near the same as the screen style)*/
+/*Plain style (by default near the same as the screen style)*/
     lv_style_copy(&lv_style_plain, &lv_style_scr);
     lv_style_plain.body.opa            = LV_OPA_COVER;
     lv_style_plain.body.padding.left   = LV_DPI / 20;
@@ -138,32 +137,32 @@ void lv_style_init(void)
 
     /*Plain color style*/
     lv_style_copy(&lv_style_plain_color, &lv_style_plain);
-    lv_style_plain_color.text.color      = lv_color_make(0xFF - 0xf0, 0xFF - 0xf0, 0xFF - 0xf0);
-    lv_style_plain_color.image.color     = lv_color_make(0xFF - 0xf0, 0xFF - 0xf0, 0xFF - 0xf0);
-    lv_style_plain_color.line.color      = lv_color_make(0xFF - 0xf0, 0xFF - 0xf0, 0xFF - 0xf0);
-    lv_style_plain_color.body.main_color = lv_color_make(0xFF - 0x55, 0xFF - 0x96, 0xFF - 0xd8);
+    lv_style_plain_color.text.color      = lv_color_make(0xf0, 0xf0, 0xf0);
+    lv_style_plain_color.image.color     = lv_color_make(0xf0, 0xf0, 0xf0);
+    lv_style_plain_color.line.color      = lv_color_make(0xf0, 0xf0, 0xf0);
+    lv_style_plain_color.body.main_color = lv_color_make(0x55, 0x96, 0xd8);
     lv_style_plain_color.body.grad_color = lv_style_plain_color.body.main_color;
 
     /*Pretty style */
     lv_style_copy(&lv_style_pretty, &lv_style_plain);
-    lv_style_pretty.text.color        = lv_color_make(0xFF - 0x20, 0xFF - 0x20, 0xFF - 0x20);
-    lv_style_pretty.image.color       = lv_color_make(0xFF - 0x20, 0xFF - 0x20, 0xFF - 0x20);
-    lv_style_pretty.line.color        = lv_color_make(0xFF - 0x20, 0xFF - 0x20, 0xFF - 0x20);
+    lv_style_pretty.text.color        = lv_color_make(0x20, 0x20, 0x20);
+    lv_style_pretty.image.color       = lv_color_make(0x20, 0x20, 0x20);
+    lv_style_pretty.line.color        = lv_color_make(0x20, 0x20, 0x20);
     lv_style_pretty.body.main_color   = LV_COLOR_WHITE;
     lv_style_pretty.body.grad_color   = LV_COLOR_SILVER;
     lv_style_pretty.body.radius       = LV_DPI / 15;
-    lv_style_pretty.body.border.color = lv_color_make(0xFF - 0x40, 0xFF - 0x40, 0xFF - 0x40);
+    lv_style_pretty.body.border.color = lv_color_make(0x40, 0x40, 0x40);
     lv_style_pretty.body.border.width = LV_DPI / 50 >= 1 ? LV_DPI / 50 : 1;
     lv_style_pretty.body.border.opa   = LV_OPA_30;
 
     /*Pretty color style*/
     lv_style_copy(&lv_style_pretty_color, &lv_style_pretty);
-    lv_style_pretty_color.text.color        = lv_color_make(0xFF - 0xe0, 0xFF - 0xe0, 0xFF - 0xe0);
-    lv_style_pretty_color.image.color       = lv_color_make(0xFF - 0xe0, 0xFF - 0xe0, 0xFF - 0xe0);
-    lv_style_pretty_color.line.color        = lv_color_make(0xFF - 0xc0, 0xFF - 0xc0, 0xFF - 0xc0);
-    lv_style_pretty_color.body.main_color   = lv_color_make(0xFF - 0x6b, 0xFF - 0x9a, 0xFF - 0xc7);
-    lv_style_pretty_color.body.grad_color   = lv_color_make(0xFF - 0x2b, 0xFF - 0x59, 0xFF - 0x8b);
-    lv_style_pretty_color.body.border.color = lv_color_make(0xFF - 0x15, 0xFF - 0x2c, 0xFF - 0x42);
+    lv_style_pretty_color.text.color        = lv_color_make(0xe0, 0xe0, 0xe0);
+    lv_style_pretty_color.image.color       = lv_color_make(0xe0, 0xe0, 0xe0);
+    lv_style_pretty_color.line.color        = lv_color_make(0xc0, 0xc0, 0xc0);
+    lv_style_pretty_color.body.main_color   = lv_color_make(0x6b, 0x9a, 0xc7);
+    lv_style_pretty_color.body.grad_color   = lv_color_make(0x2b, 0x59, 0x8b);
+    lv_style_pretty_color.body.border.color = lv_color_make(0x15, 0x2c, 0x42);
 
     /*Transparent style*/
     lv_style_copy(&lv_style_transp, &lv_style_plain);
@@ -184,8 +183,8 @@ void lv_style_init(void)
 
     /*Button released style*/
     lv_style_copy(&lv_style_btn_rel, &lv_style_plain);
-    lv_style_btn_rel.body.main_color     = lv_color_make(0xFF - 0x76, 0xFF - 0xa2, 0xFF - 0xd0);
-    lv_style_btn_rel.body.grad_color     = lv_color_make(0xFF - 0x19, 0xFF - 0x3a, 0xFF - 0x5d);
+    lv_style_btn_rel.body.main_color     = lv_color_make(0x76, 0xa2, 0xd0);
+    lv_style_btn_rel.body.grad_color     = lv_color_make(0x19, 0x3a, 0x5d);
     lv_style_btn_rel.body.main_color_stop = 0x00;
     lv_style_btn_rel.body.grad_color_stop = 0xff;;
     lv_style_btn_rel.body.grad_dir = LV_GRAD_DIR_VER;
@@ -196,7 +195,7 @@ void lv_style_init(void)
     lv_style_btn_rel.body.padding.top    = LV_DPI / 6;
     lv_style_btn_rel.body.padding.bottom = LV_DPI / 6;
     lv_style_btn_rel.body.padding.inner  = LV_DPI / 10;
-    lv_style_btn_rel.body.border.color   = lv_color_make(0xFF - 0x0b, 0xFF - 0x19, 0xFF - 0x28);
+    lv_style_btn_rel.body.border.color   = lv_color_make(0x0b, 0x19, 0x28);
     lv_style_btn_rel.body.border.width   = LV_DPI / 50 >= 1 ? LV_DPI / 50 : 1;
     lv_style_btn_rel.body.border.opa     = LV_OPA_70;
     lv_style_btn_rel.body.shadow.color   = LV_COLOR_BLACK;
@@ -204,42 +203,155 @@ void lv_style_init(void)
     lv_style_btn_rel.body.shadow.opa = LV_OPA_COVER;
     lv_style_btn_rel.body.shadow.offset.x = 0;
     lv_style_btn_rel.body.shadow.offset.y = 0;
-    lv_style_btn_rel.text.color          = lv_color_make(0xFF - 0xff, 0xFF - 0xff, 0xFF - 0xff);
-    lv_style_btn_rel.image.color         = lv_color_make(0xFF - 0xff, 0xFF - 0xff, 0xFF - 0xff);
+    lv_style_btn_rel.text.color          = lv_color_make(0xff, 0xff, 0xff);
+    lv_style_btn_rel.image.color         = lv_color_make(0xff, 0xff, 0xff);
 
     /*Button pressed style*/
     lv_style_copy(&lv_style_btn_pr, &lv_style_btn_rel);
-    lv_style_btn_pr.body.main_color = lv_color_make(0xFF - 0x33, 0xFF - 0x62, 0xFF - 0x94);
-    lv_style_btn_pr.body.grad_color = lv_color_make(0xFF - 0x10, 0xFF - 0x26, 0xFF - 0x3c);
-    lv_style_btn_pr.text.color      = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
-    lv_style_btn_pr.image.color     = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
-    lv_style_btn_pr.line.color      = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
+    lv_style_btn_pr.body.main_color = lv_color_make(0x33, 0x62, 0x94);
+    lv_style_btn_pr.body.grad_color = lv_color_make(0x10, 0x26, 0x3c);
+    lv_style_btn_pr.text.color      = lv_color_make(0xa4, 0xb5, 0xc6);
+    lv_style_btn_pr.image.color     = lv_color_make(0xa4, 0xb5, 0xc6);
+    lv_style_btn_pr.line.color      = lv_color_make(0xa4, 0xb5, 0xc6);
 
     /*Button toggle released style*/
     lv_style_copy(&lv_style_btn_tgl_rel, &lv_style_btn_rel);
-    lv_style_btn_tgl_rel.body.main_color   = lv_color_make(0xFF - 0x0a, 0xFF - 0x11, 0xFF - 0x22);
-    lv_style_btn_tgl_rel.body.grad_color   = lv_color_make(0xFF - 0x37, 0xFF - 0x62, 0xFF - 0x90);
-    lv_style_btn_tgl_rel.body.border.color = lv_color_make(0xFF - 0x01, 0xFF - 0x07, 0xFF - 0x0d);
-    lv_style_btn_tgl_rel.text.color        = lv_color_make(0xFF - 0xc8, 0xFF - 0xdd, 0xFF - 0xf4);
-    lv_style_btn_tgl_rel.image.color       = lv_color_make(0xFF - 0xc8, 0xFF - 0xdd, 0xFF - 0xf4);
-    lv_style_btn_tgl_rel.line.color        = lv_color_make(0xFF - 0xc8, 0xFF - 0xdd, 0xFF - 0xf4);
+    lv_style_btn_tgl_rel.body.main_color   = lv_color_make(0x0a, 0x11, 0x22);
+    lv_style_btn_tgl_rel.body.grad_color   = lv_color_make(0x37, 0x62, 0x90);
+    lv_style_btn_tgl_rel.body.border.color = lv_color_make(0x01, 0x07, 0x0d);
+    lv_style_btn_tgl_rel.text.color        = lv_color_make(0xc8, 0xdd, 0xf4);
+    lv_style_btn_tgl_rel.image.color       = lv_color_make(0xc8, 0xdd, 0xf4);
+    lv_style_btn_tgl_rel.line.color        = lv_color_make(0xc8, 0xdd, 0xf4);
 
     /*Button toggle pressed style*/
     lv_style_copy(&lv_style_btn_tgl_pr, &lv_style_btn_tgl_rel);
-    lv_style_btn_tgl_pr.body.main_color = lv_color_make(0xFF - 0x02, 0xFF - 0x14, 0xFF - 0x27);
-    lv_style_btn_tgl_pr.body.grad_color = lv_color_make(0xFF - 0x2b, 0xFF - 0x4c, 0xFF - 0x70);
-    lv_style_btn_tgl_pr.text.color      = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
-    lv_style_btn_tgl_pr.image.color     = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
-    lv_style_btn_tgl_pr.line.color      = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
+    lv_style_btn_tgl_pr.body.main_color = lv_color_make(0x02, 0x14, 0x27);
+    lv_style_btn_tgl_pr.body.grad_color = lv_color_make(0x2b, 0x4c, 0x70);
+    lv_style_btn_tgl_pr.text.color      = lv_color_make(0xa4, 0xb5, 0xc6);
+    lv_style_btn_tgl_pr.image.color     = lv_color_make(0xa4, 0xb5, 0xc6);
+    lv_style_btn_tgl_pr.line.color      = lv_color_make(0xa4, 0xb5, 0xc6);
 
     /*Button inactive style*/
     lv_style_copy(&lv_style_btn_ina, &lv_style_btn_rel);
-    lv_style_btn_ina.body.main_color   = lv_color_make(0xFF - 0xd8, 0xFF - 0xd8, 0xFF - 0xd8);
-    lv_style_btn_ina.body.grad_color   = lv_color_make(0xFF - 0xd8, 0xFF - 0xd8, 0xFF - 0xd8);
-    lv_style_btn_ina.body.border.color = lv_color_make(0xFF - 0x90, 0xFF - 0x90, 0xFF - 0x90);
-    lv_style_btn_ina.text.color        = lv_color_make(0xFF - 0x70, 0xFF - 0x70, 0xFF - 0x70);
-    lv_style_btn_ina.image.color       = lv_color_make(0xFF - 0x70, 0xFF - 0x70, 0xFF - 0x70);
-    lv_style_btn_ina.line.color        = lv_color_make(0xFF - 0x70, 0xFF - 0x70, 0xFF - 0x70);
+    lv_style_btn_ina.body.main_color   = lv_color_make(0xd8, 0xd8, 0xd8);
+    lv_style_btn_ina.body.grad_color   = lv_color_make(0xd8, 0xd8, 0xd8);
+    lv_style_btn_ina.body.border.color = lv_color_make(0x90, 0x90, 0x90);
+    lv_style_btn_ina.text.color        = lv_color_make(0x70, 0x70, 0x70);
+    lv_style_btn_ina.image.color       = lv_color_make(0x70, 0x70, 0x70);
+    lv_style_btn_ina.line.color        = lv_color_make(0x70, 0x70, 0x70);
+    
+    // /*Plain style (by default near the same as the screen style)*/
+    // lv_style_copy(&lv_style_plain, &lv_style_scr);
+    // lv_style_plain.body.opa            = LV_OPA_COVER;
+    // lv_style_plain.body.padding.left   = LV_DPI / 20;
+    // lv_style_plain.body.padding.right  = LV_DPI / 20;
+    // lv_style_plain.body.padding.top    = LV_DPI / 20;
+    // lv_style_plain.body.padding.bottom = LV_DPI / 20;
+
+    // /*Plain color style*/
+    // lv_style_copy(&lv_style_plain_color, &lv_style_plain);
+    // lv_style_plain_color.text.color      = lv_color_make(0xFF - 0xf0, 0xFF - 0xf0, 0xFF - 0xf0);
+    // lv_style_plain_color.image.color     = lv_color_make(0xFF - 0xf0, 0xFF - 0xf0, 0xFF - 0xf0);
+    // lv_style_plain_color.line.color      = lv_color_make(0xFF - 0xf0, 0xFF - 0xf0, 0xFF - 0xf0);
+    // lv_style_plain_color.body.main_color = lv_color_make(0xFF - 0x55, 0xFF - 0x96, 0xFF - 0xd8);
+    // lv_style_plain_color.body.grad_color = lv_style_plain_color.body.main_color;
+
+    // /*Pretty style */
+    // lv_style_copy(&lv_style_pretty, &lv_style_plain);
+    // lv_style_pretty.text.color        = lv_color_make(0xFF - 0x20, 0xFF - 0x20, 0xFF - 0x20);
+    // lv_style_pretty.image.color       = lv_color_make(0xFF - 0x20, 0xFF - 0x20, 0xFF - 0x20);
+    // lv_style_pretty.line.color        = lv_color_make(0xFF - 0x20, 0xFF - 0x20, 0xFF - 0x20);
+    // lv_style_pretty.body.main_color   = LV_COLOR_WHITE;
+    // lv_style_pretty.body.grad_color   = LV_COLOR_SILVER;
+    // lv_style_pretty.body.radius       = LV_DPI / 15;
+    // lv_style_pretty.body.border.color = lv_color_make(0xFF - 0x40, 0xFF - 0x40, 0xFF - 0x40);
+    // lv_style_pretty.body.border.width = LV_DPI / 50 >= 1 ? LV_DPI / 50 : 1;
+    // lv_style_pretty.body.border.opa   = LV_OPA_30;
+
+    // /*Pretty color style*/
+    // lv_style_copy(&lv_style_pretty_color, &lv_style_pretty);
+    // lv_style_pretty_color.text.color        = lv_color_make(0xFF - 0xe0, 0xFF - 0xe0, 0xFF - 0xe0);
+    // lv_style_pretty_color.image.color       = lv_color_make(0xFF - 0xe0, 0xFF - 0xe0, 0xFF - 0xe0);
+    // lv_style_pretty_color.line.color        = lv_color_make(0xFF - 0xc0, 0xFF - 0xc0, 0xFF - 0xc0);
+    // lv_style_pretty_color.body.main_color   = lv_color_make(0xFF - 0x6b, 0xFF - 0x9a, 0xFF - 0xc7);
+    // lv_style_pretty_color.body.grad_color   = lv_color_make(0xFF - 0x2b, 0xFF - 0x59, 0xFF - 0x8b);
+    // lv_style_pretty_color.body.border.color = lv_color_make(0xFF - 0x15, 0xFF - 0x2c, 0xFF - 0x42);
+
+    // /*Transparent style*/
+    // lv_style_copy(&lv_style_transp, &lv_style_plain);
+    // lv_style_transp.glass             = 1;
+    // lv_style_transp.body.border.width = 0;
+    // lv_style_transp.body.opa          = LV_OPA_TRANSP;
+
+    // /*Transparent fitting size*/
+    // lv_style_copy(&lv_style_transp_fit, &lv_style_transp);
+    // lv_style_transp_fit.body.padding.left   = 0;
+    // lv_style_transp_fit.body.padding.right  = 0;
+    // lv_style_transp_fit.body.padding.top    = 0;
+    // lv_style_transp_fit.body.padding.bottom = 0;
+
+    // /*Transparent tight style*/
+    // lv_style_copy(&lv_style_transp_tight, &lv_style_transp_fit);
+    // lv_style_transp_tight.body.padding.inner = 0;
+
+    // /*Button released style*/
+    // lv_style_copy(&lv_style_btn_rel, &lv_style_plain);
+    // lv_style_btn_rel.body.main_color     = lv_color_make(0xFF - 0x76, 0xFF - 0xa2, 0xFF - 0xd0);
+    // lv_style_btn_rel.body.grad_color     = lv_color_make(0xFF - 0x19, 0xFF - 0x3a, 0xFF - 0x5d);
+    // lv_style_btn_rel.body.main_color_stop = 0x00;
+    // lv_style_btn_rel.body.grad_color_stop = 0xff;;
+    // lv_style_btn_rel.body.grad_dir = LV_GRAD_DIR_VER;
+    // lv_style_btn_rel.body.radius         = LV_DPI / 15;
+    // lv_style_btn_rel.body.opa         = LV_OPA_COVER;
+    // lv_style_btn_rel.body.padding.left   = LV_DPI / 4;
+    // lv_style_btn_rel.body.padding.right  = LV_DPI / 4;
+    // lv_style_btn_rel.body.padding.top    = LV_DPI / 6;
+    // lv_style_btn_rel.body.padding.bottom = LV_DPI / 6;
+    // lv_style_btn_rel.body.padding.inner  = LV_DPI / 10;
+    // lv_style_btn_rel.body.border.color   = lv_color_make(0xFF - 0x0b, 0xFF - 0x19, 0xFF - 0x28);
+    // lv_style_btn_rel.body.border.width   = LV_DPI / 50 >= 1 ? LV_DPI / 50 : 1;
+    // lv_style_btn_rel.body.border.opa     = LV_OPA_70;
+    // lv_style_btn_rel.body.shadow.color   = LV_COLOR_BLACK;
+    // lv_style_btn_rel.body.shadow.width   = 0;
+    // lv_style_btn_rel.body.shadow.opa = LV_OPA_COVER;
+    // lv_style_btn_rel.body.shadow.offset.x = 0;
+    // lv_style_btn_rel.body.shadow.offset.y = 0;
+    // lv_style_btn_rel.text.color          = lv_color_make(0xFF - 0xff, 0xFF - 0xff, 0xFF - 0xff);
+    // lv_style_btn_rel.image.color         = lv_color_make(0xFF - 0xff, 0xFF - 0xff, 0xFF - 0xff);
+
+    // /*Button pressed style*/
+    // lv_style_copy(&lv_style_btn_pr, &lv_style_btn_rel);
+    // lv_style_btn_pr.body.main_color = lv_color_make(0xFF - 0x33, 0xFF - 0x62, 0xFF - 0x94);
+    // lv_style_btn_pr.body.grad_color = lv_color_make(0xFF - 0x10, 0xFF - 0x26, 0xFF - 0x3c);
+    // lv_style_btn_pr.text.color      = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
+    // lv_style_btn_pr.image.color     = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
+    // lv_style_btn_pr.line.color      = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
+
+    // /*Button toggle released style*/
+    // lv_style_copy(&lv_style_btn_tgl_rel, &lv_style_btn_rel);
+    // lv_style_btn_tgl_rel.body.main_color   = lv_color_make(0xFF - 0x0a, 0xFF - 0x11, 0xFF - 0x22);
+    // lv_style_btn_tgl_rel.body.grad_color   = lv_color_make(0xFF - 0x37, 0xFF - 0x62, 0xFF - 0x90);
+    // lv_style_btn_tgl_rel.body.border.color = lv_color_make(0xFF - 0x01, 0xFF - 0x07, 0xFF - 0x0d);
+    // lv_style_btn_tgl_rel.text.color        = lv_color_make(0xFF - 0xc8, 0xFF - 0xdd, 0xFF - 0xf4);
+    // lv_style_btn_tgl_rel.image.color       = lv_color_make(0xFF - 0xc8, 0xFF - 0xdd, 0xFF - 0xf4);
+    // lv_style_btn_tgl_rel.line.color        = lv_color_make(0xFF - 0xc8, 0xFF - 0xdd, 0xFF - 0xf4);
+
+    // /*Button toggle pressed style*/
+    // lv_style_copy(&lv_style_btn_tgl_pr, &lv_style_btn_tgl_rel);
+    // lv_style_btn_tgl_pr.body.main_color = lv_color_make(0xFF - 0x02, 0xFF - 0x14, 0xFF - 0x27);
+    // lv_style_btn_tgl_pr.body.grad_color = lv_color_make(0xFF - 0x2b, 0xFF - 0x4c, 0xFF - 0x70);
+    // lv_style_btn_tgl_pr.text.color      = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
+    // lv_style_btn_tgl_pr.image.color     = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
+    // lv_style_btn_tgl_pr.line.color      = lv_color_make(0xFF - 0xa4, 0xFF - 0xb5, 0xFF - 0xc6);
+
+    // /*Button inactive style*/
+    // lv_style_copy(&lv_style_btn_ina, &lv_style_btn_rel);
+    // lv_style_btn_ina.body.main_color   = lv_color_make(0xFF - 0xd8, 0xFF - 0xd8, 0xFF - 0xd8);
+    // lv_style_btn_ina.body.grad_color   = lv_color_make(0xFF - 0xd8, 0xFF - 0xd8, 0xFF - 0xd8);
+    // lv_style_btn_ina.body.border.color = lv_color_make(0xFF - 0x90, 0xFF - 0x90, 0xFF - 0x90);
+    // lv_style_btn_ina.text.color        = lv_color_make(0xFF - 0x70, 0xFF - 0x70, 0xFF - 0x70);
+    // lv_style_btn_ina.image.color       = lv_color_make(0xFF - 0x70, 0xFF - 0x70, 0xFF - 0x70);
+    // lv_style_btn_ina.line.color        = lv_color_make(0xFF - 0x70, 0xFF - 0x70, 0xFF - 0x70);
 #else //#ifdef BLACKGROUND
     /* Not White/Black/Gray colors are created by HSV model with
      * HUE = 210*/
