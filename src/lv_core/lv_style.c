@@ -140,7 +140,7 @@ void lv_style_init(void)
     lv_style_plain_color.text.color      = lv_color_make(0xf0, 0xf0, 0xf0);
     lv_style_plain_color.image.color     = lv_color_make(0xf0, 0xf0, 0xf0);
     lv_style_plain_color.line.color      = lv_color_make(0xf0, 0xf0, 0xf0);
-    lv_style_plain_color.body.main_color = lv_color_make(0x55, 0x96, 0xd8);
+    lv_style_plain_color.body.main_color = LV_COLOR_BLACK; // lv_color_make(0x55, 0x96, 0xd8);
     lv_style_plain_color.body.grad_color = lv_style_plain_color.body.main_color;
 
     /*Pretty style */
